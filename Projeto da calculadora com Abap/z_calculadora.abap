@@ -30,7 +30,7 @@ FORM realiza_calculo.
   IF rb_adi IS NOT INITIAL.
     gv_operacao = 'Adição'.
     gv_result = p_numb1 + p_numb2.
-*Subitração:
+*Subtração:
   ELSEIF rb_sub EQ 'X'.
     gv_operacao = 'Subtração'.
     gv_result = p_numb1 - p_numb2.
