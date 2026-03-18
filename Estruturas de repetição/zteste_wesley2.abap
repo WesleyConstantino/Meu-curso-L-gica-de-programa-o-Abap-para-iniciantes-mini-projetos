@@ -36,11 +36,15 @@ START-OF-SELECTION.
 *Loop at:
   LOOP AT gt_paciente INTO wa_paciente.
 
+    WRITE / wa_paciente-nome.
+
   ENDLOOP.
 
 *Loop at com WHERE:
   LOOP AT gt_paciente INTO wa_paciente WHERE nome = 'Mestre Yoda' AND
                                              rg   = '1001002-1'.
+
+    WRITE: / wa_paciente-nome, wa_paciente-rg.
 
   ENDLOOP.
 
@@ -54,16 +58,9 @@ START-OF-SELECTION.
 *Do:
   DO 2 TIMES.
 
-  ENDDO.
-
-*Loops infinitos:
-  DO.
+    gv_count = gv_count + 1.
 
   ENDDO.
-
-  WHILE 2 EQ 2.
-
-  ENDWHILE.
 
 *Parando um loop (EXIT):
   DO.
@@ -72,7 +69,7 @@ START-OF-SELECTION.
       EXIT.
     ENDIF.
 
-  WRITE / gv_count.
+    WRITE / gv_count.
 
   ENDDO.
 
@@ -86,3 +83,26 @@ START-OF-SELECTION.
     WRITE / wa_paciente-nome.
 
   ENDLOOP.
+
+*Loops infinitos:
+  "Loop infinito DO:
+  DO.
+
+    WRITE / 'Loop infinito.'.
+
+    IF 1 = 2.
+      EXIT.
+    ENDIF.
+
+  ENDDO.
+
+  "Loop infinito WHILE:
+  WHILE 2 EQ 2.
+
+    WRITE / 'Loop infinito.'.
+
+    IF 1 = 2.
+      EXIT.
+    ENDIF.
+
+  ENDWHILE.
