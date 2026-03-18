@@ -72,6 +72,8 @@ START-OF-SELECTION.
       EXIT.
     ENDIF.
 
+  WRITE / gv_count.
+
   ENDDO.
 
 *Interrompendo o loop atual (CONTINUE):
