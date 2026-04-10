@@ -17,7 +17,7 @@ DATA: gv_nome      TYPE string,
 
 *Constantes:
 CONSTANTS: gc_empresa TYPE c VALUE 'SAP',
-           gc_verba   TYPE p VALUE '1000.00'.
+           gc_verba   TYPE p DECIMALS 2 VALUE '1000.00'.
 
 START-OF-SELECTION.
 
