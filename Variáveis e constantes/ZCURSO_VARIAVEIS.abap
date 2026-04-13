@@ -31,7 +31,7 @@ START-OF-SELECTION.
 
   MOVE 'Wesley' TO gv_nome.
 
-  WRITE '07:3000' TO gv_hora.
+  WRITE '07:30' TO gv_hora.
 
 *Saída:
   WRITE: / 'Nome:', gv_nome.
