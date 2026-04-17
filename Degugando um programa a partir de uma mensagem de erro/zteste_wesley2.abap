@@ -1,17 +1,18 @@
 report zteste_wesley2.
 
-data lv_resultado type i.
+DATA lv_resultado TYPE i.
 
-selection-screen begin of block b1.
+SELECTION-SCREEN BEGIN OF BLOCK b1.
 
-parameters p_mult type i.
+  PARAMETERS p_mult TYPE i.
 
-selection-screen end of block b1.
+SELECTION-SCREEN END OF BLOCK b1.
 
-start-of-selection.
+START-OF-SELECTION.
 
-if p_mult is initial.
-  message 'Valor não aceito!' type 'S' display like 'E'.
-else.
-  lv_resultado = p_mult / 2.
-endif.
+  IF p_mult IS INITIAL.
+    MESSAGE 'Valor não aceito!' TYPE 'S' DISPLAY LIKE 'E'.
+*    MESSAGE s000(zrtch) DISPLAY LIKE 'E'.
+  ELSE.
+    lv_resultado = p_mult / 2.
+  ENDIF.
