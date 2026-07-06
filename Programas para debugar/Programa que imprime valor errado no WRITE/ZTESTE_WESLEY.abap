@@ -5,10 +5,10 @@
 *&---------------------------------------------------------------------*
 REPORT zteste_wesley.
 
-DATA gv_result TYPE c.
+DATA gv_result(10) TYPE c.
 
 SELECTION-SCREEN BEGIN OF BLOCK b1.
-  PARAMETERS p_desc TYPE c.
+  PARAMETERS p_desc(10) TYPE c.
 SELECTION-SCREEN END OF BLOCK b1.
 
 START-OF-SELECTION.
